@@ -132,24 +132,6 @@ export default function ResultPage() {
             <span className="font-bold text-orange-300">Mesmo que {getPersonalizedPronoun()} tenha dito que nunca mais quer te ver</span> e você tenha tentado de tudo sem sucesso.
           </p>
 
-          {/* Video Introdutório */}
-          <div className="max-w-4xl mx-auto mb-8 relative">
-            <div className="aspect-video bg-gray-800 rounded-xl overflow-hidden border-4 border-orange-500 shadow-2xl">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  className="w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center cursor-pointer"
-                >
-                  <Play className="w-10 h-10 text-white" />
-                </motion.div>
-                <div className="absolute bottom-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
-                  3:47
-                </div>
-              </div>
-            </div>
-            <p className="text-gray-400 mt-2 text-sm">Assista ao vídeo para entender como o método funciona</p>
-          </div>
-
           {/* Comparativo Antes e Depois */}
           <div id="historia" className="max-w-4xl mx-auto mb-12">
             <Card className="bg-gray-50 border-2 border-gray-300 overflow-hidden">
@@ -1396,13 +1378,7 @@ export default function ResultPage() {
           animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
           transition={{ delay: 0.7 }}
           className="mb-8 text-center"
-        >
-          <EmailCapture />
-          <Button
-            onClick={handlePurchase}
-            size="lg"
-            className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 px-6 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
-          >
+
             GARANTIR VAGA
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
