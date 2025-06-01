@@ -642,19 +642,6 @@ export default function ResultPage() {
                         </li>
                       </ul>
                       
-                      <div className="mt-4 bg-gray-700/50 p-3 rounded-lg">
-                        <div className="flex items-center">
-                          <img 
-                            src="https://optimalhealthscout.shop/wp-content/uploads/2025/05/preview-mod1.jpg" 
-                            alt="Preview do Módulo 1" 
-                            className="w-16 h-16 object-cover rounded mr-4"
-                          />
-                          <div>
-                            <p className="text-sm text-gray-400">Prévia do material:</p>
-                            <p className="text-white font-medium">Inclui 3 vídeos, 1 e-book e 2 exercícios práticos</p>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -689,19 +676,6 @@ export default function ResultPage() {
                         </li>
                       </ul>
                       
-                      <div className="mt-4 bg-gray-700/50 p-3 rounded-lg">
-                        <div className="flex items-center">
-                          <img 
-                            src="https://optimalhealthscout.shop/wp-content/uploads/2025/05/preview-mod2.jpg" 
-                            alt="Preview do Módulo 2" 
-                            className="w-16 h-16 object-cover rounded mr-4"
-                          />
-                          <div>
-                            <p className="text-sm text-gray-400">Prévia do material:</p>
-                            <p className="text-white font-medium">Inclui 7 vídeos, 1 e-book e 7 exercícios práticos</p>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -731,19 +705,6 @@ export default function ResultPage() {
                         </div>
                       </div>
                       
-                      <div className="mt-4 bg-gray-700/50 p-3 rounded-lg">
-                        <div className="flex items-center">
-                          <img 
-                            src="https://optimalhealthscout.shop/wp-content/uploads/2025/05/preview-mod3.jpg" 
-                            alt="Preview do Módulo 3" 
-                            className="w-16 h-16 object-cover rounded mr-4"
-                          />
-                          <div>
-                            <p className="text-sm text-gray-400">Prévia do material:</p>
-                            <p className="text-white font-medium">Inclui 4 vídeos específicos, 4 scripts de mensagens e 1 guia de ação</p>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -778,19 +739,6 @@ export default function ResultPage() {
                         </li>
                       </ul>
                       
-                      <div className="mt-4 bg-gray-700/50 p-3 rounded-lg">
-                        <div className="flex items-center">
-                          <img 
-                            src="https://optimalhealthscout.shop/wp-content/uploads/2025/05/preview-mod4.jpg" 
-                            alt="Preview do Módulo 4" 
-                            className="w-16 h-16 object-cover rounded mr-4"
-                          />
-                          <div>
-                            <p className="text-sm text-gray-400">Prévia do material:</p>
-                            <p className="text-white font-medium">Inclui 5 vídeos, 1 e-book e 3 ferramentas de manutenção</p>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
