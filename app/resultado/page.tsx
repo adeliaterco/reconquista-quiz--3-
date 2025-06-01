@@ -1378,6 +1378,11 @@ export default function ResultPage() {
           animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
           transition={{ delay: 0.7 }}
           className="mb-8 text-center"
+        >
+          <Button
+            onClick={handlePurchase}
+            size="lg"
+            className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 px-6 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
           >
             GARANTIR VAGA
             <ArrowRight className="w-5 h-5 ml-2" />
@@ -1632,47 +1637,4 @@ export default function ResultPage() {
       </div>
     </div>
   )
-}
-
-// Componente de captura de email
-function EmailCapture() {
-  const handleSubmitEmail = (email: string) => {
-    try {
-      enviarEvento('capturou_lead', {
-        tipo_captura: 'email'
-      });
-      console.log('Evento de captura de lead registrado com sucesso');
-      
-      // Seu código para processar o email
-    } catch (error) {
-      console.error('Erro ao registrar evento de captura de lead:', error);
-    }
-  };
-
-  return (
-    <div className="max-w-md mx-auto mb-6 bg-gray-800 p-4 rounded-lg">
-      <h4 className="text-white font-bold mb-3 text-center">RECEBA DICAS EXCLUSIVAS DE RECONQUISTA</h4>
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        const emailInput = e.currentTarget.querySelector('input[type="email"]') as HTMLInputElement;
-        if (emailInput && emailInput.value) {
-          handleSubmitEmail(emailInput.value);
-        }
-      }} className="flex flex-col sm:flex-row gap-2">
-        <input 
-          type="email" 
-          placeholder="Seu melhor email" 
-          required 
-          className="flex-grow p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
-        />
-        <button 
-          type="submit" 
-          className="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600 transition-colors"
-        >
-          Receber dicas
-        </button>
-      </form>
-      <p className="text-gray-400 text-xs mt-2 text-center">Prometemos não enviar spam. Você pode cancelar a qualquer momento.</p>
-    </div>
-  );
 }
