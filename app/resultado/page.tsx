@@ -94,31 +94,6 @@ export default function ResultPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black p-4" ref={contentRef}>
       {/* Navegação interna */}
-      <div className="sticky top-0 z-50 bg-black/80 backdrop-blur-sm py-3 px-4 mb-6 border-b border-gray-800">
-        <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-3 text-sm">
-          <button onClick={() => scrollToSection('historia')} className="text-orange-400 hover:text-orange-300 px-3 py-1 rounded-full hover:bg-gray-800 transition-colors">
-            História
-          </button>
-          <button onClick={() => scrollToSection('metodo')} className="text-orange-400 hover:text-orange-300 px-3 py-1 rounded-full hover:bg-gray-800 transition-colors">
-            O Método
-          </button>
-          <button onClick={() => scrollToSection('modulos')} className="text-orange-400 hover:text-orange-300 px-3 py-1 rounded-full hover:bg-gray-800 transition-colors">
-            Conteúdo
-          </button>
-          <button onClick={() => scrollToSection('depoimentos')} className="text-orange-400 hover:text-orange-300 px-3 py-1 rounded-full hover:bg-gray-800 transition-colors">
-            Depoimentos
-          </button>
-          <button onClick={() => scrollToSection('bonus')} className="text-orange-400 hover:text-orange-300 px-3 py-1 rounded-full hover:bg-gray-800 transition-colors">
-            Bônus
-          </button>
-          <button onClick={() => scrollToSection('garantias')} className="text-orange-400 hover:text-orange-300 px-3 py-1 rounded-full hover:bg-gray-800 transition-colors">
-            Garantias
-          </button>
-          <button onClick={() => scrollToSection('oferta')} className="bg-orange-500 text-white px-3 py-1 rounded-full hover:bg-orange-600 transition-colors">
-            Ver Oferta
-          </button>
-        </div>
-      </div>
 
       <div className="max-w-6xl mx-auto">
         <motion.div
