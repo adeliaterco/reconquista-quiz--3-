@@ -1378,12 +1378,6 @@ export default function ResultPage() {
           animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
           transition={{ delay: 0.7 }}
           className="mb-8 text-center"
-        >
-          <EmailCapture />
-          <Button
-            onClick={handlePurchase}
-            size="lg"
-            className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 px-6 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
           >
             GARANTIR VAGA
             <ArrowRight className="w-5 h-5 ml-2" />
