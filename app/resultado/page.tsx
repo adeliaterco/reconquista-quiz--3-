@@ -293,14 +293,6 @@ export default function ResultPage() {
                   </div>
                 </div>
 
-                <div className="mt-6 bg-black/30 p-4 rounded-lg">
-                  <h4 className="text-xl font-bold text-orange-300 mb-3">COMO VISTO EM:</h4>
-                  <div className="flex flex-wrap justify-center gap-6 opacity-80">
-                    <img src="https://optimalhealthscout.shop/wp-content/uploads/2025/05/logo-media1.png" alt="Media Logo" className="h-8" />
-                    <img src="https://optimalhealthscout.shop/wp-content/uploads/2025/05/logo-media2.png" alt="Media Logo" className="h-8" />
-                    <img src="https://optimalhealthscout.shop/wp-content/uploads/2025/05/logo-media3.png" alt="Media Logo" className="h-8" />
-                  </div>
-                </div>
               </CardContent>
             </Card>
           </div>
