@@ -266,7 +266,7 @@ export default function ResultPage() {
                 <div className="flex flex-col md:flex-row items-center gap-8">
                   <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-orange-400 flex-shrink-0">
                     <img 
-                      src="https://optimalhealthscout.shop/wp-content/uploads/2025/05/coach-profile.jpg" 
+                      src="https://optimalhealthscout.shop/wp-content/uploads/2025/05/imagem_gerada-2025-05-29T235022.934.png" 
                       alt="Criador do Método" 
                       className="w-full h-full object-cover"
                     />
