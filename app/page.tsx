@@ -100,7 +100,7 @@ export default function HomePage() {
                 </motion.div>
               </motion.div>
 
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">PLANO A</h1>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">PLANO AAA</h1>
               <h2 className="text-3xl md:text-4xl font-semibold text-orange-400 mb-8">RECONQUISTA RÁPIDA</h2>
             </motion.div>
 
