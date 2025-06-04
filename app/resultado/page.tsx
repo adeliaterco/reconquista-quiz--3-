@@ -1051,67 +1051,165 @@ export default function ResultPage() {
           </div>
         </motion.div>
 
-        {/* Oferta Principal */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 0.9 }}
-          transition={{ delay: 0.2 }}
-          id="oferta"
-          className="mb-12"
-        >
-          <Card className="bg-gradient-to-r from-red-600 to-orange-600 text-white shadow-2xl border-4 border-yellow-400">
-            <CardContent className="p-8 text-center">
-              <div className="bg-yellow-400 text-black font-bold py-2 px-6 rounded-full inline-block mb-6">
-                🔥 OFERTA LIMITADA - APENAS HOJE
-              </div>
+{/* Oferta Principal Consolidada */}
+<motion.div
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 0.9 }}
+  transition={{ delay: 0.2 }}
+  id="oferta"
+  className="mb-12"
+>
+  <Card className="bg-gradient-to-r from-red-600 to-orange-600 text-white shadow-2xl border-4 border-yellow-400">
+    <CardContent className="p-8 text-center">
+      <div className="bg-yellow-400 text-black font-bold py-2 px-6 rounded-full inline-block mb-6">
+        🔥 OFERTA LIMITADA - APENAS HOJE
+      </div>
 
-              <h3 className="text-3xl md:text-5xl font-bold mb-4">PLANO A - RECONQUISTA RÁPIDA</h3>
+      <h3 className="text-3xl md:text-5xl font-bold mb-4">PLANO A - RECONQUISTA RÁPIDA</h3>
 
-              <p className="text-xl md:text-2xl mb-6 font-semibold">
-                O Sistema Completo que Já Reconquistou Mais de 3.847 Relacionamentos
-              </p>
+      <p className="text-xl md:text-2xl mb-6 font-semibold">
+        O Sistema Completo que Já Reconquistou Mais de 3.847 Relacionamentos
+      </p>
 
-              <div className="bg-white/20 rounded-lg p-6 mb-6">
-                <div className="grid md:grid-cols-3 gap-4 text-center">
+      {/* Conteúdo Principal - Consolidado */}
+      <div className="bg-white/20 rounded-lg p-6 mb-6">
+        <h4 className="text-2xl font-bold text-yellow-300 mb-4">O QUE VOCÊ RECEBE:</h4>
+        
+        <div className="grid md:grid-cols-2 gap-6 text-left mb-6">
+          <div>
+            <h5 className="text-xl font-bold text-yellow-200 mb-3">📚 CONTEÚDO PRINCIPAL:</h5>
+            <ul className="space-y-2 text-white">
+              <li className="flex items-start">
+                <Check className="w-5 h-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                <span>Sistema completo de 21 dias passo-a-passo</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="w-5 h-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                <span>7 Pilares da Presença Irresistível</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="w-5 h-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                <span>21 Gatilhos Emocionais Infalíveis</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="w-5 h-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                <span>Protocolo de 72 horas para casos urgentes</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h5 className="text-xl font-bold text-yellow-200 mb-3">🎯 SUPORTE E ACESSO:</h5>
+            <ul className="space-y-2 text-white">
+              <li className="flex items-start">
+                <Check className="w-5 h-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                <span>Acesso pelo celular, tablet ou computador</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="w-5 h-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                <span>Atualizações gratuitas vitalícias</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="w-5 h-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                <span>Suporte prioritário por 30 dias</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="w-5 h-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                <span>Comunidade privada de apoio</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        {/* Bônus Consolidados */}
+        <div className="text-left mb-6">
+          <h5 className="text-xl font-bold text-yellow-200 mb-3">🎁 BÔNUS EXCLUSIVOS DESBLOQUEADOS ({unlockedBonuses.length} de 5):</h5>
+          <div className="grid md:grid-cols-2 gap-3">
+            {bonuses.map((bonus, index) => (
+              <div 
+                key={bonus.id}
+                className={`p-3 rounded-lg ${
+                  unlockedBonuses.includes(bonus.id)
+                    ? "bg-green-500/30 border border-green-400"
+                    : "bg-gray-700/30 border border-gray-600"
+                }`}
+              >
+                <div className="flex items-start">
+                  {unlockedBonuses.includes(bonus.id) ? (
+                    <Check className="w-5 h-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                  ) : (
+                    <Gift className="w-5 h-5 text-gray-400 mr-2 mt-1 flex-shrink-0" />
+                  )}
                   <div>
-                    <div className="text-3xl font-bold text-yellow-300">21 DIAS</div>
-                    <div className="text-sm">Prazo máximo</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-yellow-300">97%</div>
-                    <div className="text-sm">Taxa de sucesso</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-yellow-300">3.847</div>
-                    <div className="text-sm">Pessoas ajudadas</div>
+                    <span className="font-bold text-white">
+                      {getPersonalizedContent(bonus.title, userGender)}
+                    </span>
+                    <div className="text-sm text-yellow-200 mt-1">Valor: R$ {bonus.value}</div>
                   </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
-              {/* Botão de Compra na Oferta - Personalizado */}
-              <motion.div
-                animate={{
-                  scale: [1, 1.05, 1],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Number.POSITIVE_INFINITY,
-                  repeatType: "reverse",
-                }}
-              >
-                <Button
-                  onClick={handlePurchase}
-                  size="lg"
-                  className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-6 rounded-full text-lg sm:text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4 w-full sm:w-auto"
-                >
-                  {getPersonalizedCTA()}
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </motion.div>
-              <p className="text-yellow-200 text-sm">✅ Acesso imediato • 💳 Parcelamento disponível</p>
-            </CardContent>
-          </Card>
-        </motion.div>
+      {/* Preço Consolidado */}
+      <div className="mb-6">
+        <div className="text-red-300 text-xl font-bold mb-2">
+          <span className="line-through">VALOR TOTAL: R$ 297</span>
+        </div>
+        <div className="text-6xl font-bold text-yellow-300 mb-2">R$ 37</div>
+        <div className="text-xl text-white font-bold">OU 3x DE R$ 12,33</div>
+        
+        <div className="bg-yellow-500 text-black font-bold py-2 px-6 rounded-full inline-block mt-4">
+          💰 ECONOMIA DE R$ 260 HOJE!
+        </div>
+      </div>
+
+      {/* CTA Unificado */}
+      <motion.div
+        animate={{
+          scale: [1, 1.05, 1],
+        }}
+        transition={{
+          duration: 2,
+          repeat: Number.POSITIVE_INFINITY,
+          repeatType: "reverse",
+        }}
+      >
+        <Button
+          onClick={handlePurchase}
+          size="lg"
+          className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-6 rounded-full text-lg sm:text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4 w-full sm:w-auto"
+        >
+          {getPersonalizedCTA()}
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </Button>
+      </motion.div>
+      
+      <div className="flex justify-center gap-4 text-sm text-white">
+        <div className="flex items-center">
+          <Check className="w-4 h-4 text-green-400 mr-1" />
+          <span>Acesso imediato</span>
+        </div>
+        <div className="flex items-center">
+          <Check className="w-4 h-4 text-green-400 mr-1" />
+          <span>Parcelamento disponível</span>
+        </div>
+        <div className="flex items-center">
+          <Check className="w-4 h-4 text-green-400 mr-1" />
+          <span>Garantia de 30 dias</span>
+        </div>
+      </div>
+      
+      {recentBuyers > 0 && (
+        <div className="mt-4 bg-red-500 text-white py-2 px-4 rounded-full inline-block">
+          🔥 {recentBuyers} pessoas compraram nas últimas 2 horas!
+        </div>
+      )}
+    </CardContent>
+  </Card>
+</motion.div>
 
         {/* O QUE VOCÊ VAI RECEBER - MÓDULO ÚNICO */}
         <motion.div
